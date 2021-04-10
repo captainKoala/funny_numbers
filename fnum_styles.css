@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/Vollkorn-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vollkorn", serif;
+}
+
+html, body {
+    height: 100%;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 50px 10px;
+    text-transform: uppercase;
+    font-size: xx-large;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.screen {
+    display: none;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: solid;
+    border-left-style: solid;
+}
+
+.game-screen, .how-to-play-screen, .settings-screen, .about-screen {
+    display: none;
+    visibility: hidden;
+}
+
+.startmenu-btn {
+    margin: 10px;
+    text-align: center;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.startmenu-btn:active {
+    transform: scale(0.95);
+}
+
+.gamefield {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding-right: 1px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.number {
+    margin: 0 0 1px 1px;
+    border-style: solid;
+    border-width: 1px;
+    transition: margin-bottom 0.4s ease-out;
+    text-align: center;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.new-block {
+    margin-bottom: 400px;
+}
+
+.status-bar, .game-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.status-bar {
+    justify-content: space-between;
+}
+
+.status-bar span {
+    margin-left: 30px;
+}
+
+.game-control {
+    width: 25%;
+    text-align: center;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.game-control svg {
+    height: 100%;
+}
+
+.game-control svg:active {
+    transform: scale(0.8);
+}
+
+.status {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.removing {
+    margin: 0;
+    height: 0; !important;
+    border-width: 0;
+    overflow: hidden;
+    transform-origin: bottom;
+    transition: height 0.5s, margin 0.5s, border-width 0.5s;
+}
+
+.content {
+    padding: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+.checkbox, .radiobutton {
+    margin: 15px 15px 15px 0;
+    vertical-align: middle;
+}
+
+input:not(:checked) + .checkbox-checked,
+input:not(:checked) + .radiobutton-selected {
+    display: none;
+}
+
+input:checked + * + .checkbox-unchecked,
+input:checked + * + .radiobutton-unselected {
+    display: none;
+}
+
+.color-scheme-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-scheme {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 100px;
+    height: 25px;
+    border: 1px black solid;
+}
+
+.how-to-play-screen .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.how-to-play-message {
+    padding: 15px;
+    text-align: center;
+}
+
+/*   СООБЩЕНИЕ   */
+.message {
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+}
+
+.message-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message-btns {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.message-btn {
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    vertical-align: middle;
+}

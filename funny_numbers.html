@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numbers</title>
+    <link rel="stylesheet" href="fnum_styles.css?r013">
+</head>
+<body>
+    <div class="loading" style="text-align: center">Загрузка...</div>
+    <!--      ГЛАВНЫЙ ЭКРАН      -->
+    <div class="start-screen screen">
+        <h1 class="main-title">Funny numbers</h1>
+        <div class="start-game-btn startmenu-btn">Играть</div>
+        <div class="how-to-play-btn startmenu-btn">Как играть</div>
+        <div class="settings-btn startmenu-btn">Настройки</div>
+        <div class="about-btn startmenu-btn">Об игре</div>
+    </div>
+
+    <!--      ЭКРАН ИГРЫ      -->
+    <div class="game-screen screen">
+        <div class="status-bar">
+            <span class="record" title="Рекорд">0</span>
+            <span>
+                <span class="steps" title="Ходы">0</span>
+                <span class="score" title="Счёт">0</span>
+            </span>
+        </div>
+        <div class="gamefield" id="gamefield"></div>
+        <div class="game-controls">
+            <div class="game-control new-numbers" title="Еще числа!">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
+            </div>
+            <div class="game-control tip-btn" title="Помощь">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25c.691 0 1.25.56 1.25 1.25s-.559 1.25-1.25 1.25zm1.961-5.928c-.904.975-.947 1.514-.935 2.178h-2.005c-.007-1.475.02-2.125 1.431-3.468.573-.544 1.025-.975.962-1.821-.058-.805-.73-1.226-1.365-1.226-.709 0-1.538.527-1.538 2.013h-2.01c0-2.4 1.409-3.95 3.59-3.95 1.036 0 1.942.339 2.55.955.57.578.865 1.372.854 2.298-.016 1.383-.857 2.291-1.534 3.021z"/></svg>
+            </div>
+            <div class="game-control restart" title="Заново">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 20l-1.359-2.038c-1.061.653-2.305 1.038-3.641 1.038-3.859 0-7-3.14-7-7h2c0 2.757 2.243 5 5 5 .927 0 1.786-.264 2.527-.708l-1.527-2.292h5.719l-1.719 6zm0-8c0-2.757-2.243-5-5-5-.927 0-1.786.264-2.527.708l1.527 2.292h-5.719l1.719-6 1.359 2.038c1.061-.653 2.305-1.038 3.641-1.038 3.859 0 7 3.14 7 7h-2z"/></svg>
+            </div>
+            <div class="game-control menu-btn" title="Меню">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-4.5 14c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm4.5 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm4.5 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/></svg>
+            </div>
+        </div>
+    </div>
+
+    <!--      ЭКРАН КАК ИГРАТЬ      -->
+    <div class="how-to-play-screen screen">
+        <div class="back-btn how-to-play-back-btn startmenu-btn">Назад</div>
+        <div class="gamefield" id="example-gamefield">
+        </div>
+        <div class="content">
+            <span class="how-to-play-message">example</span>
+        </div>
+
+    </div>
+
+    <!--      ЭКРАН НАСТРОЕК      -->
+    <div class="settings-screen screen">
+        <h2>funny numbers</h2>
+        <div class="content">
+            <h3>Цветовая схема</h3>
+            <div class="color-scheme-list"></div>
+        </div>
+        <div class="back-btn startmenu-btn">Назад</div>
+    </div>
+
+    <!--      ЭКРАН ОБ ИГРЕ    -->
+    <div class="about-screen screen">
+        <h2>funny numbers</h2>
+        <div class="content">
+            <div>Версия: <span class="version">1.0.0.022-013</span></div>
+            <div>Звуки - <a href="https://www.tonedock.com/">https://www.tonedock.com/</a></div>
+            <div>Иконки - <a href="https://iconmonstr.com/">https://iconmonstr.com/</a></div>
+        </div>
+        <div class="back-btn startmenu-btn">Назад</div>
+    </div>
+
+
+    <script src="fnum_main.js?r022"></script>
+</body>
+</html>
